@@ -1,0 +1,6 @@
+---
+# defaults file for myreboot
+
+myreboot_port: 22
+myreboot_delay: 15
+myreboot_timeout: 90

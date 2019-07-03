@@ -1,0 +1,8 @@
+---
+# tasks file for myreboot
+
+- name: Reboot system
+  shell: "date"
+  notify:
+    - reboot_system
+    - wait_for_system

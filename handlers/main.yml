@@ -1,0 +1,19 @@
+---
+# handlers file for myreboot
+
+- name: reboot_system
+  shell: "sleep 3 ; systemctl reboot"
+  async: 1
+  poll: 0
+  ignore_errors: true
+
+- name: wait_for_system
+  become: False
+  wait_for:
+    host: "{{ inventory_hostname }}"
+    state: started
+    port: "{{ myreboot_port }}"
+    delay: "{{ myreboot_delay }}"
+    timeout: "{{ myreboot_timeout }}"
+  delegate_to:  localhost
+
