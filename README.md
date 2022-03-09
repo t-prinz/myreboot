@@ -1,7 +1,7 @@
 Role Name
 =========
 
-A brief description of the role goes here.
+This role is used to reboot a Linux system.  However, I would recommend using the builtin Ansible reboot module instead.
 
 Requirements
 ------------
